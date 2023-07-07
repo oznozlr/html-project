@@ -1,0 +1,281 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'DM Sans', sans-serif;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+
+  /*
+  #F28D35 -- orange
+  #F2C744  -- yellow
+  #C2F2ED -- light blue
+  #55CCD9 -- blue
+  #206E8C --dark blue
+  #191919 -- black
+  
+  
+  
+  */
+
+
+  @media (min-width: 320px) {
+    /* --- container-start  ---  */
+
+    .containerOuter{
+        background-color: #191919 ;
+    }
+    .containerOuter .containerOuterDown{
+        background-color: #FFFFFF ;
+
+    }
+    .containerInner{
+        padding: 0 15px;
+    }
+    /* --- container-end  ---  */
+
+    /* --- header-start  ---  */
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 15px;
+    }
+    .logo{
+        font-family: 'DM Serif Display', serif;
+        text-decoration: none;
+        color: #F2F2F2;
+        font-size: 24px;
+        line-height: 32px;
+        width: 145px;
+        height: 45px;
+    }
+    .nav{
+        display: none;
+        list-style: none;
+        gap: 40px;
+
+    }
+    .nav a{
+        color:  #F2F2F2;
+        text-decoration: none;
+        font-weight: 700;
+        display: inline-block;
+        padding-bottom: 0.25rem;
+        position: relative;
+        
+        
+    }
+    .nav a::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background-color: #F28705;
+      text-decoration: underline;
+      transition:width 0.25s ease-out;
+  }
+  .nav a:hover::before{
+      width: 100%;
+  }
+
+
+  /* --- header-button-start  ---  */
+    .button{
+        display: inline-block;
+        text-decoration: none;
+        font-weight: 700;
+        color: #F2F2F2;
+        padding: 10px 50px;
+        border: 1px solid #F2F2F2;
+        border-radius: 5px;
+
+    }
+    .button:hover{
+        background-color: #F29F05;
+        color: #191919;
+        border: 1px solid #F28D35;
+
+    }
+    .signUpButton {
+        display: none;
+    }
+    /* --- header-button-end  ---  */
+
+    /* --- header-end  ---  */
+
+
+    .sectionBgColor{
+
+      background-color: #FFFFFF;
+    }
+    
+    .sectionItem img {
+      margin-top: 100px;
+     
+      width: 100%;
+      height: auto;
+      
+  }
+  
+    .sectionItem h1 {
+      
+      text-decoration: none;
+      color: #000;
+      font-weight: 700;
+      margin-bottom: 15px;
+  }
+  .sectionItem p{
+    color: #191919;
+  }
+
+  /* --- hero-Button-start  ---  */
+
+  .heroBtn{
+        width: 100%;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        font-weight: 700;
+        color: #F2F2F2;
+        padding: 10px 50px;
+        border:1px solid #F28705;
+        background-color: #F28705;
+        border-radius: 5px;
+  }
+  .heroBtn:hover{
+    color: #191919;
+  }
+  /* --- hero-Button-end  ---  */
+  
+
+  /* --- aside-bar-start  ---  */
+  .sidenav {
+    height: 100%;
+    width: 0; 
+    position: fixed; 
+    z-index: 1;
+    top: 0; 
+    right: 0;
+    background-color: #111; 
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s; 
+  }
+  
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.5s;
+  }
+  
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+   
+  }
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+ /* --- aside-bar-end  ---  */
+
+
+
+  }
+
+  @media (min-width: 1200px) {
+    .header{
+        gap: 40px;
+
+    }
+    .logo{
+        margin-right: auto;
+    }
+    .nav{
+        display: flex;
+
+    }
+    .containerInner{
+        width: 1200px;
+        margin: 0 auto;
+    }
+    .signUpButton {
+        display: inline-block;
+    }
+
+    
+    .sectionItem {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 25px;
+      
+      align-items: center;
+
+  }
+    .sectionItem img {
+    
+   
+    width: 50%;
+    height: auto;
+    
+}
+
+  }
+
+
+  
+
+
